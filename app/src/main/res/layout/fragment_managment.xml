@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:backgroundTint="@color/white"
+    tools:context=".ManagmentFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/add_dr"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/std"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/new_std"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/new_material"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_dr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/edit_dr"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_std"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/edit_std"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/new_curriculum"
+            android:gravity="center"
+            android:background="@drawable/view_background"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+</ScrollView>

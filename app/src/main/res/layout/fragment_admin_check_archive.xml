@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:backgroundTint="@color/white"
+    tools:context=".AdminCheckArchiveFragment" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailsAr"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/details"
+            android:gravity="center"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <TextView
+        android:id="@+id/MaterialDesc2Ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="material name"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsAr" />
+
+    <TextView
+        android:id="@+id/nbOfLectures2Ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nb OF LECTURES: "
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MaterialDesc2Ar" />
+
+    <TextView
+        android:id="@+id/StdInfo2Ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" student: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbOfLectures2Ar" />
+
+    <LinearLayout
+        android:id="@+id/stdAtt2Ar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StdInfo2Ar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

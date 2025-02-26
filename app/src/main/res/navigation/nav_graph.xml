@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.attendease.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_adminLoginFragment"
+            app:destination="@id/adminLoginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_drLoginFragment"
+            app:destination="@id/drLoginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_stdLoginFragment"
+            app:destination="@id/stdLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDeptFragment"
+        android:name="com.example.attendease.AddDeptFragment"
+        android:label="fragment_add_dept"
+        tools:layout="@layout/fragment_add_dept" />
+    <fragment
+        android:id="@+id/addDrFragment"
+        android:name="com.example.attendease.AddDrFragment"
+        android:label="fragment_add_dr"
+        tools:layout="@layout/fragment_add_dr" >
+        <action
+            android:id="@+id/action_addDrFragment_to_addDrMaterialFragment"
+            app:destination="@id/addDrMaterialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.attendease.AddStudentFragment"
+        android:label="fragment_add_student"
+        tools:layout="@layout/fragment_add_student" >
+        <action
+            android:id="@+id/action_addStudentFragment_to_addStudentMaterialFragment"
+            app:destination="@id/addStudentMaterialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addYearFragment"
+        android:name="com.example.attendease.AddYearFragment"
+        android:label="fragment_add_year"
+        tools:layout="@layout/fragment_add_year" />
+    <fragment
+        android:id="@+id/adminFunctionsFragment"
+        android:name="com.example.attendease.AdminFunctionsFragment"
+        android:label="fragment_admin_functions"
+        tools:layout="@layout/fragment_admin_functions" >
+        <action
+            android:id="@+id/action_adminFunctionsFragment_to_managmentFragment"
+            app:destination="@id/managmentFragment" />
+        <action
+            android:id="@+id/action_adminFunctionsFragment_to_adminDoArchiveFragment"
+            app:destination="@id/adminDoArchiveFragment" />
+        <action
+            android:id="@+id/action_adminFunctionsFragment_to_adminAttendanceFragment"
+            app:destination="@id/adminAttendanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminLoginFragment"
+        android:name="com.example.attendease.AdminLoginFragment"
+        android:label="fragment_admin_login"
+        tools:layout="@layout/fragment_admin_login" >
+        <action
+            android:id="@+id/action_adminLoginFragment_to_adminFunctionsFragment"
+            app:destination="@id/adminFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managmentFragment"
+        android:name="com.example.attendease.ManagmentFragment"
+        android:label="fragment_managment"
+        tools:layout="@layout/fragment_managment" >
+        <action
+            android:id="@+id/action_managmentFragment_to_addDrFragment"
+            app:destination="@id/addDrFragment"
+            app:popUpTo="@id/managmentFragment" />
+        <action
+            android:id="@+id/action_managmentFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment"
+            app:popUpTo="@id/managmentFragment" />
+        <action
+            android:id="@+id/action_managmentFragment_to_addMaterielsFragment"
+            app:destination="@id/addMaterielsFragment"
+            app:popUpTo="@id/managmentFragment" />
+        <action
+            android:id="@+id/action_managmentFragment_to_adminUpdateCurriculumFragment"
+            app:destination="@id/adminUpdateCurriculumFragment" />
+        <action
+            android:id="@+id/action_managmentFragment_to_editDrMaterialsFragment"
+            app:destination="@id/editDrMaterialsFragment" />
+        <action
+            android:id="@+id/action_managmentFragment_to_adminSelectStdToUpdateMaterialFragment"
+            app:destination="@id/adminSelectStdToUpdateMaterialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drLoginFragment"
+        android:name="com.example.attendease.DrLoginFragment"
+        android:label="fragment_dr_login"
+        tools:layout="@layout/fragment_dr_login" >
+        <action
+            android:id="@+id/action_drLoginFragment_to_drSelectSemFragment"
+            app:destination="@id/drSelectSemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stdLoginFragment"
+        android:name="com.example.attendease.StdLoginFragment"
+        android:label="fragment_std_login"
+        tools:layout="@layout/fragment_std_login" >
+        <action
+            android:id="@+id/action_stdLoginFragment_to_stdSelectSemFragment"
+            app:destination="@id/stdSelectSemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drFunctionsFragment"
+        android:name="com.example.attendease.DrFunctionsFragment"
+        android:label="fragment_dr_functions"
+        tools:layout="@layout/fragment_dr_functions" >
+        <action
+            android:id="@+id/action_drFunctionsFragment_to_drShowAttendanceFragment"
+            app:destination="@id/drShowAttendanceFragment" />
+        <argument
+            android:name="drId"
+            app:argType="string" />
+        <argument
+            android:name="materialId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_drFunctionsFragment_to_drCreateSessionFragment"
+            app:destination="@id/drCreateSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drMaterialFragment"
+        android:name="com.example.attendease.DrMaterialFragment"
+        android:label="fragment_dr_material"
+        tools:layout="@layout/fragment_dr_material" >
+        <action
+            android:id="@+id/action_drMaterialFragment_to_drFunctionsFragment"
+            app:destination="@id/drFunctionsFragment" />
+        <argument
+            android:name="DoctorId"
+            app:argType="string" />
+        <argument
+            android:name="SelectedSem"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/drSelectSemFragment"
+        android:name="com.example.attendease.DrSelectSemFragment"
+        android:label="fragment_dr_select_sem"
+        tools:layout="@layout/fragment_dr_select_sem" >
+        <action
+            android:id="@+id/action_drSelectSemFragment_to_drMaterialFragment"
+            app:destination="@id/drMaterialFragment" />
+        <argument
+            android:name="DoctorId"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/drAddAttendanceFragment"
+        android:name="com.example.attendease.DrAddAttendanceFragment"
+        android:label="fragment_dr_add_attendance"
+        tools:layout="@layout/fragment_dr_add_attendance" >
+
+        <argument
+            android:name="materialId"
+            app:argType="string" />
+        <argument
+            android:name="sessionId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_drAddAttendanceFragment_to_drMaterialFragment"
+            app:destination="@id/drMaterialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drShowAttendanceFragment"
+        android:name="com.example.attendease.DrShowAttendanceFragment"
+        android:label="fragment_dr_show_attendance"
+        tools:layout="@layout/fragment_dr_show_attendance" >
+        <argument
+            android:name="Material_Id"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/stdSelectSemFragment"
+        android:name="com.example.attendease.StdSelectSemFragment"
+        android:label="fragment_std_select_sem"
+        tools:layout="@layout/fragment_std_select_sem" >
+        <action
+            android:id="@+id/action_stdSelectSemFragment_to_stdShowAttendanceFragment"
+            app:destination="@id/stdShowAttendanceFragment" />
+        <argument
+            android:name="StudentId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/stdShowAttendanceFragment"
+        android:name="com.example.attendease.StdShowAttendanceFragment"
+        android:label="fragment_std_show_attendance"
+        tools:layout="@layout/fragment_std_show_attendance" >
+        <argument
+            android:name="StudentId"
+            app:argType="string" />
+        <argument
+            android:name="SelectedSem"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDoArchiveFragment"
+        android:name="com.example.attendease.AdminDoArchiveFragment"
+        android:label="fragment_admin_do_archive"
+        tools:layout="@layout/fragment_admin_do_archive" />
+    <fragment
+        android:id="@+id/addLangFragment"
+        android:name="com.example.attendease.AddLangFragment"
+        android:label="fragment_add_lang"
+        tools:layout="@layout/fragment_add_lang" />
+    <fragment
+        android:id="@+id/addSemFragment"
+        android:name="com.example.attendease.AddSemFragment"
+        android:label="fragment_add_sem"
+        tools:layout="@layout/fragment_add_sem" />
+    <fragment
+        android:id="@+id/addMaterielsFragment"
+        android:name="com.example.attendease.AddMaterielsFragment"
+        android:label="fragment_add_materiels"
+        tools:layout="@layout/fragment_add_materiels" />
+    <fragment
+        android:id="@+id/addStudentMaterialFragment"
+        android:name="com.example.attendease.AddStudentMaterialFragment"
+        android:label="fragment_add_student_material"
+        tools:layout="@layout/fragment_add_student_material" >
+        <argument
+            android:name="StudentId"
+            app:argType="string" />
+        <argument
+            android:name="Department"
+            app:argType="string" />
+        <argument
+            android:name="Language"
+            app:argType="string" />
+        <argument
+            android:name="AcademicYearId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addStudentMaterialFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment"
+            app:popUpTo="@id/managmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDrMaterialFragment"
+        android:name="com.example.attendease.AddDrMaterialFragment"
+        android:label="AddDrMaterialFragment"
+        tools:layout="@layout/fragment_add_dr_material">
+        <argument
+            android:name="DoctorId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/drCreateSessionFragment"
+        android:name="com.example.attendease.DrCreateSessionFragment"
+        android:label="fragment_dr_create_session"
+        tools:layout="@layout/fragment_dr_create_session" >
+        <action
+            android:id="@+id/action_drCreateSessionFragment_to_drAddAttendanceFragment"
+            app:destination="@id/drAddAttendanceFragment"
+            app:popUpTo="@id/drMaterialFragment" />
+        <argument
+            android:name="drId"
+            app:argType="string" />
+        <argument
+            android:name="materialId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAttendanceFragment"
+        android:name="com.example.attendease.AdminAttendanceFragment"
+        android:label="fragment_admin_attendance"
+        tools:layout="@layout/fragment_admin_attendance" >
+        <action
+            android:id="@+id/action_adminAttendanceFragment_to_adminAttendSelectMaterialFragment"
+            app:destination="@id/adminAttendSelectMaterialFragment" />
+        <action
+            android:id="@+id/action_adminAttendanceFragment_to_adminCheckArchiveSelectMaterialFragment"
+            app:destination="@id/adminCheckArchiveSelectMaterialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAttendSelectMaterialFragment"
+        android:name="com.example.attendease.AdminAttendSelectMaterialFragment"
+        android:label="fragment_admin_attend_select_material"
+        tools:layout="@layout/fragment_admin_attend_select_material" >
+        <action
+            android:id="@+id/action_adminAttendSelectMaterialFragment_to_adminShowAttendFragment"
+            app:destination="@id/adminShowAttendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminShowAttendFragment"
+        android:name="com.example.attendease.AdminShowAttendFragment"
+        android:label="fragment_admin_show_attend"
+        tools:layout="@layout/fragment_admin_show_attend" >
+        <action
+            android:id="@+id/action_adminShowAttendFragment_to_adminShowAttendDetailsFragment"
+            app:destination="@id/adminShowAttendDetailsFragment" />
+        <argument
+            android:name="materialId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminShowAttendDetailsFragment"
+        android:name="com.example.attendease.AdminShowAttendDetailsFragment"
+        android:label="fragment_admin_show_attend_details"
+        tools:layout="@layout/fragment_admin_show_attend_details" >
+        <argument
+            android:name="materialId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCheckArchiveSelectMaterialFragment"
+        android:name="com.example.attendease.AdminCheckArchiveSelectMaterialFragment"
+        android:label="fragment_admin_check_archive_select_material"
+        tools:layout="@layout/fragment_admin_check_archive_select_material" >
+        <action
+            android:id="@+id/action_adminCheckArchiveSelectMaterialFragment_to_adminCheckArchiveFragment"
+            app:destination="@id/adminCheckArchiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCheckArchiveFragment"
+        android:name="com.example.attendease.AdminCheckArchiveFragment"
+        android:label="fragment_admin_check_archive"
+        tools:layout="@layout/fragment_admin_check_archive" >
+        <argument
+            android:name="materialID"
+            app:argType="string" />
+        <argument
+            android:name="yearStr"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminCheckArchiveFragment_to_adminCheckArchiveDetailsFragment"
+            app:destination="@id/adminCheckArchiveDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCheckArchiveDetailsFragment"
+        android:name="com.example.attendease.AdminCheckArchiveDetailsFragment"
+        android:label="fragment_admin_check_archive_details"
+        tools:layout="@layout/fragment_admin_check_archive_details" >
+        <argument
+            android:name="materialid"
+            app:argType="string" />
+        <argument android:name="year"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUpdateCurriculumFragment"
+        android:name="com.example.attendease.AdminUpdateCurriculumFragment"
+        android:label="fragment_admin_update_curriculum"
+        tools:layout="@layout/fragment_admin_update_curriculum" >
+        <action
+            android:id="@+id/action_adminUpdateCurriculumFragment_to_addYearFragment"
+            app:destination="@id/addYearFragment" />
+        <action
+            android:id="@+id/action_adminUpdateCurriculumFragment_to_addLangFragment"
+            app:destination="@id/addLangFragment" />
+        <action
+            android:id="@+id/action_adminUpdateCurriculumFragment_to_addDeptFragment"
+            app:destination="@id/addDeptFragment" />
+        <action
+            android:id="@+id/action_adminUpdateCurriculumFragment_to_addSemFragment"
+            app:destination="@id/addSemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDrMaterialsFragment"
+        android:name="com.example.attendease.EditDrMaterialsFragment"
+        android:label="fragment_edit_dr_materials"
+        tools:layout="@layout/fragment_edit_dr_materials" >
+        <action
+            android:id="@+id/action_editDrMaterialsFragment_to_adminUpdateMaterialsDrFragment"
+            app:destination="@id/adminUpdateMaterialsDrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUpdateMaterialsDrFragment"
+        android:name="com.example.attendease.AdminUpdateMaterialsDrFragment"
+        android:label="fragment_admin_update_materials_dr"
+        tools:layout="@layout/fragment_admin_update_materials_dr" >
+        <argument
+            android:name="drId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminUpdateMaterialsDrFragment_to_adminAddMateriasToDrFragment"
+            app:destination="@id/adminAddMateriasToDrFragment"
+            app:popUpTo="@id/editDrMaterialsFragment" />
+        <action
+            android:id="@+id/action_adminUpdateMaterialsDrFragment_to_adminRemoveMaterialsFromDrFragment"
+            app:destination="@id/adminRemoveMaterialsFromDrFragment"
+            app:popUpTo="@id/editDrMaterialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAddMateriasToDrFragment"
+        android:name="com.example.attendease.AdminAddMateriasToDrFragment"
+        android:label="fragment_admin_add_materias_to_dr"
+        tools:layout="@layout/fragment_admin_add_materias_to_dr" >
+        <argument
+            android:name="drId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminAddMateriasToDrFragment_to_editDrMaterialsFragment"
+            app:destination="@id/editDrMaterialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRemoveMaterialsFromDrFragment"
+        android:name="com.example.attendease.AdminRemoveMaterialsFromDrFragment"
+        android:label="fragment_admin_remove_materials_from_dr"
+        tools:layout="@layout/fragment_admin_remove_materials_from_dr" >
+        <argument
+            android:name="drId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminRemoveMaterialsFromDrFragment_to_editDrMaterialsFragment"
+            app:destination="@id/editDrMaterialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminSelectStdToUpdateMaterialFragment"
+        android:name="com.example.attendease.AdminSelectStdToUpdateMaterialFragment"
+        android:label="fragment_admin_select_std_to_update_material"
+        tools:layout="@layout/fragment_admin_select_std_to_update_material" >
+        <action
+            android:id="@+id/action_adminSelectStdToUpdateMaterialFragment_to_adminUpdateMaterialsStdFragment"
+            app:destination="@id/adminUpdateMaterialsStdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUpdateMaterialsStdFragment"
+        android:name="com.example.attendease.AdminUpdateMaterialsStdFragment"
+        android:label="fragment_admin_update_materials_std"
+        tools:layout="@layout/fragment_admin_update_materials_std" >
+        <action
+            android:id="@+id/action_adminUpdateMaterialsStdFragment_to_adminAddMaterialsToStdFragment"
+            app:destination="@id/adminAddMaterialsToStdFragment" />
+        <action
+            android:id="@+id/action_adminUpdateMaterialsStdFragment_to_adminRemoveMaterialFromStdFragment"
+            app:destination="@id/adminRemoveMaterialFromStdFragment" />
+        <argument
+            android:name="stdId"
+            app:argType="string" />
+        <argument
+            android:name="yearId"
+            app:argType="string" />
+        <argument
+            android:name="deptId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAddMaterialsToStdFragment"
+        android:name="com.example.attendease.AdminAddMaterialsToStdFragment"
+        android:label="fragment_admin_add_materials_to_std"
+        tools:layout="@layout/fragment_admin_add_materials_to_std" >
+        <argument
+            android:name="stdId"
+            app:argType="string" />
+        <argument
+            android:name="deptId"
+            app:argType="string" />
+        <argument
+            android:name="yearId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminAddMaterialsToStdFragment_to_adminUpdateMaterialsStdFragment"
+            app:destination="@id/adminUpdateMaterialsStdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRemoveMaterialFromStdFragment"
+        android:name="com.example.attendease.AdminRemoveMaterialFromStdFragment"
+        android:label="fragment_admin_remove_material_from_std"
+        tools:layout="@layout/fragment_admin_remove_material_from_std" >
+        <argument
+            android:name="stdId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adminRemoveMaterialFromStdFragment_to_adminUpdateMaterialsStdFragment"
+            app:destination="@id/adminUpdateMaterialsStdFragment" />
+        <argument
+            android:name="yearId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.attendease.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+</navigation>
